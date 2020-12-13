@@ -1,4 +1,55 @@
 .aside-container {
-  background-color: red;
-  width: 400px;
+  display: flex;
+  flex: 1;
+  justify-content: left;
+  background-color: #174157;
+  width: 250px;
+  height: 100vh;
+  box-shadow: 1px 0px 2px 1px rgba(0, 0, 0, 0.42);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 45px;
+  padding-bottom: 40px;
+  color: #f8f8f8;
+  border-bottom: solid 1px #f8f8f8;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.list-resources {
+  padding-top: 80px;
+  width: 100%;
+}
+
+.list-resources li {
+  list-style: none;
+  margin-bottom: 50px;
+  font-size: 25px;
+  color: #f8f8f8;
+}
+
+.list-resources li:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.date {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.date p {
+  font-size: 20px;
+  color: #f8f8f8;
+  text-align: center;
 }
