@@ -8,24 +8,24 @@ export class Nav extends Component {
         <header className="navigation">
           <div className="search">
             <input type="text" placeholder="Search.."/>
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </div>
           <nav>
             <ul className="nav-list">
               <li>
-                <i class="far fa-envelope"></i>
+                <i className="far fa-envelope"></i>
               </li>
               <li>
-                <i class="far fa-bell"></i>
+                <i className="far fa-bell"></i>
               </li>
               <li>
-                <i class="far fa-user"></i>
+                <i className="far fa-user"></i>
               </li>
               <li>
                 <span>Alfonso Dalix</span>
               </li>
               <li>
-                <i class="fas fa-sign-out-alt"></i>
+                <i className="fas fa-sign-out-alt"></i>
               </li>
             </ul>
           </nav>
