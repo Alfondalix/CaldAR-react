@@ -11,7 +11,7 @@ export class BuildingItem extends Component {
         <div>{`Boilers: ${this.props.building.boilers.join('-')}`}</div>
         <div>{`Phone Number: ${this.props.building.phoneNumber}`}</div>
         <button
-          className="dlt-btn"
+          className="btn"
           onClick={this.props.deleteBuilding.bind(this, this.props.building.id)}
         >
           <i className="far fa-trash-alt"></i>

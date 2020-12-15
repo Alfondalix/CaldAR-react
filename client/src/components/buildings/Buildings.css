@@ -1,8 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+.form-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #174157;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
+}
+
+form input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0;
+  margin: 10px 10px;
+  font-size: 16px;
+  width: 98%;
+}
+
+.title-building {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px auto;
+}
+
+.title-building-2 {
+  color: #f8f8f8;
+  text-align: center;
+  font-size: 24px;
+  margin: 20px auto;
+}
+
 .container {
   display: flex;
   align-items: center;
   text-align: left;
   margin-top: 20px;
+  background-color: #174157;
+  color: #f8f8f8;
+  margin: 20px 30px;
+  border: solid 1px black;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
 }
 
 .container div {
@@ -10,19 +52,24 @@
   font-weight: 500;
   text-align: left;
   flex: 1;
-  padding: 0 30px;
+  margin-left: 30px;
 }
 
-.dlt-btn {
+.btn {
   border: none;
   font-size: 20px;
   background-color: transparent;
   margin-right: 30px;
   cursor: pointer;
+  color: #f8f8f8;
 }
 
-.dlt-btn:hover {
-  color: #f8f8f8;
-  background-color: black;
+.btn:hover {
+  color: black;
+  background-color: #f8f8f8;
   border-radius: 30%;
+}
+
+.subm-btn {
+  color: red;
 }

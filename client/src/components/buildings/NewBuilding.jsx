@@ -8,7 +8,7 @@ export class NewBuilding extends Component {
     phoneNumber: '',
   };
 
-  changeValue = (e) => {
+  handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -32,12 +32,12 @@ export class NewBuilding extends Component {
   render() {
     return (
       <>
-        <div>
-          <h1>New Building</h1>
+        <div className="form-container">
+          <h1 className="title-building-2">New Building</h1>
           <form onSubmit={this.create}>
             <input
               value={this.state.fullName}
-              onChange={this.changeValue}
+              onChange={this.handleChange}
               placeholder="Name..."
               name="fullName"
               type="text"
@@ -45,7 +45,7 @@ export class NewBuilding extends Component {
             />
             <input
               value={this.state.address}
-              onChange={this.changeValue}
+              onChange={this.handleChange}
               placeholder="Address..."
               name="address"
               type="text"
@@ -53,7 +53,7 @@ export class NewBuilding extends Component {
             />
             <input
               value={this.state.boilers}
-              onChange={this.changeValue}
+              onChange={this.handleChange}
               placeholder="Boilers..."
               name="boilers"
               type="text"
@@ -61,13 +61,13 @@ export class NewBuilding extends Component {
             />
             <input
               value={this.state.phoneNumber}
-              onChange={this.changeValue}
+              onChange={this.handleChange}
               placeholder="Phone Number..."
               name="phoneNumber"
               type="text"
               required
             />
-            <input type="submit" value="Submit" />
+            <input className="subm-btn" type="submit" value="Add" />
           </form>
         </div>
       </>

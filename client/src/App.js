@@ -5,6 +5,7 @@ import Nav from './components/nav/Nav';
 import Buildings from './components/buildings/Buildings';
 import Data from './mocks/buildings.json';
 import NewBuilding from './components/buildings/NewBuilding';
+import EditBuilding from './components/buildings/EditBuilding';
 
 class App extends Component {
   state = {
@@ -18,12 +19,19 @@ class App extends Component {
     });
   };
 
-  editBuilding = (editedBuilding) => {
-    const edited = this.state.data;
+  updateBuilding = (updatedBuilding) => {
+    const updatedBuildings = this.state.data;
+    const index = updatedBuildings.findIndex(
+      (oldBuilding) => oldBuilding.id === updatedBuilding.id
+    );
+    updatedBuildings[index] = updatedBuilding;
     this.setState({
-      data: edited,
+      data: updatedBuildings,
     });
   };
+
+  searchBuilding = (id) =>
+    this.state.data.find((building) => parseInt(building.id) === parseInt(id));
 
   deleteBuilding = (id) => {
     this.setState({
@@ -43,7 +51,15 @@ class App extends Component {
               deleteBuilding={this.deleteBuilding}
             />
             <div className="create-edit">
-              <NewBuilding addBuilding={this.addBuilding} />
+              <div className="new-building">
+                <NewBuilding addBuilding={this.addBuilding} />
+              </div>
+              <div className="edit-building">
+                <EditBuilding
+                  searchBuilding={this.searchBuilding}
+                  updateBuilding={this.updateBuilding}
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -9,3 +9,21 @@
 .wrapper {
   width: 100%;
 }
+
+.create-edit {
+  display: flex;
+}
+
+.new-building {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 30px;
+}
+
+.edit-building {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 30px;
+}
