@@ -12,6 +12,7 @@ class App extends Component {
     data: Data,
   };
 
+  /* ADD */
   addBuilding = (building) => {
     building.id = this.state.data[this.state.data.length - 1].id + 1;
     this.setState({
@@ -19,6 +20,7 @@ class App extends Component {
     });
   };
 
+  /* EDIT AND UPDATE */
   updateBuilding = (updatedBuilding) => {
     const updatedBuildings = this.state.data;
     const index = updatedBuildings.findIndex(
@@ -33,6 +35,7 @@ class App extends Component {
   searchBuilding = (id) =>
     this.state.data.find((building) => parseInt(building.id) === parseInt(id));
 
+  /* DELETE */
   deleteBuilding = (id) => {
     this.setState({
       data: [...this.state.data.filter((building) => building.id !== id)],
